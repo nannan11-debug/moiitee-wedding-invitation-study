@@ -1,0 +1,180 @@
+.invitation_body{
+    background: black;
+}
+
+.invitation_wrap{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.smartstoreBuyingWrap{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    background: var(--ColorSurface);
+    border-radius: var(--BorderRadius-Md);
+}
+.leftItem, .rightItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.rightItem{
+    width: 100%;
+}
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* 투명한 오버레이 */
+    z-index: 1;
+    display: none; /* 기본적으로 숨김 */
+}
+
+.img-wrapper {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.grid-img-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0); /* 투명한 오버레이 */
+    z-index: 1;
+}
+
+
+.stepNum{
+    width: 20px;
+    text-align: center;
+    height: 20px;
+    background: var(--ColorTintBlack);
+    color: var(--ColorTextOnSurface);
+    border-radius: var(--BorderRadius-Capsule);
+    font-size: var(--Text-Supported-2);
+    line-height: 20px;
+}
+.stepborder{
+    width: 2px;
+    height: 100%;
+    background: var(--ColorBorder10);
+}
+#stepborderLastChild{
+    opacity: 0;
+}
+
+.buyingStepWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 16px;
+    background: var(--ColorSurface);
+    border-radius: var(--BorderRadius-Md);
+}
+.btnNaverSmartStore{
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+    border-radius: var(--BorderRadius-Md);
+    color: var(--ColorTextOnSurface);
+    background-color: #0fcb67;
+    font-size: var(--Text-Button);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: var(--transition);
+}
+.btnNaverSmartStore:hover{
+    opacity: 0.8;
+}
+
+
+.watermarkBtnWrap{
+    padding: 16px;
+    background: var(--ColorSurface);
+    border-radius: var(--BorderRadius-Md);
+}
+
+#naverIDInput, #naverOrdererInput{
+    padding: 11px;
+}
+
+#deleteWaterMarkBtn{
+    height: 40px;
+    background: var(--ColorBrandHighLight);
+    color: var(--ColorTextOnSurface);
+    border-radius: var(--BorderRadius-Md);
+    width: 100%;
+    line-height: 40px;
+    font-size: var(--Text-Button);
+    font-weight: 500;
+    font-family: 'pretendard', sans-serif;
+    transition: var(--transition);
+}
+
+#deleteWaterMarkBtn:hover{
+    opacity: 0.8;
+}
+
+.title_effect_lower_wrap{
+    display: none;
+}
+
+
+.title-effect-wave-surfer-comp-lower {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 28px;
+    overflow: hidden;
+}
+
+.title-effect-wave-surfer-comp-lower .wave {
+    animation: wave 4s linear infinite;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 1600px;
+    height: 28px;
+    background-size: 1600px 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../../../Resource/templates/controls/lastImg/wave.svg);
+    z-index: 10;
+}
+.title-effect-wave-surfer-comp-lower .wave-1 {
+    animation-direction: reverse;
+    opacity: 0.7;
+}
+
+.title-effect-wave-surfer-comp-lower .wave-2 {
+    animation-duration: 14s;
+    opacity: 0.4;
+}
+
+.title-effect-wave-surfer-comp-lower .wave-3 {
+    animation-duration: 8s;
+    opacity: 0.2;
+}
+
+@keyframes wave {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -800px;
+    }
+}

@@ -1,0 +1,212 @@
+/* 디자인 템플릿 공통요소 정의*/
+@import url(../views//partials/titleTemplates/DesignArch/DesignArch.css);
+@import url(../views//partials/titleTemplates/DesignRadius/DesignRadius.css);
+@import url(../views//partials/titleTemplates/DesignSimple/DesignSimple.css);
+@import url(../views//partials/titleTemplates/DesignTogether/DesignTogether.css);
+@import url(../views//partials/titleTemplates/DesignTrip/DesignTrip.css);
+@import url(../views//partials/titleTemplates/DesignBase/DesignBase.css);
+@import url(../views//partials/titleTemplates/DesignSimple_line_01/DesignSimple_line_01.css);
+@import url(../views//partials/titleTemplates/DesignSimple_line_02/DesignSimple_line_02.css);
+@import url(../views//partials/titleTemplates/DesignSimple_line_03/DesignSimple_line_03.css);
+
+
+
+
+/* 워터마크 */
+.GroomName, .BrideName{
+    display: flex;
+    align-items: center;
+}
+
+
+.watermarkWrap{
+    max-width: 400px;
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100000000;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+    font-family: 'pretendard' , sans-serif;
+    text-align: center;
+    background: var(--ColorBrand);
+    color: var(--ColorTextPrimary);
+    border-top: 1px dashed var(--ColorTextSecondary);
+    box-sizing: border-box;
+}
+.watermarkTitleWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.watermarkTitle1{
+    font-size: var(--Text-SectionSubTitle);
+}
+.watermarkTitle2{
+    font-size: var(--SectionTitle);
+    font-weight: 500;
+}
+
+.watermarkDescriptionWrap{
+    font-size: var(--Text-Button);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 4px;
+}
+
+.watermarkDescription1, .watermarkDescription2{
+    padding: 4px;
+    background: var(--ColorBrand);
+}
+
+
+.waterMarkDel{
+    font-size: var(--Text-Button);
+    padding: 8px 20px;
+    width: fit-content;
+    border-radius: var(--BorderRadius-Md);
+    color: var(--ColorTextOnSurface);
+    background: var(--ColorTintBlack);
+    box-shadow: 0 4px 6px #00000050;
+    cursor: pointer;
+}
+
+.textHighlight{
+    color: var(--ColorBrandHighLight);
+}
+
+
+/* 이펙트 효과 */
+.VideoEffect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.effects {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    object-fit: cover;
+}
+
+/* 오디오 컨트롤 */
+.AudioPlayPause {
+    z-index: 10005;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+}
+
+.AudioBGM {
+    display: none;
+}
+
+.AudioControl {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 1;
+    animation: fadeInFromTop 0.8s ease-in-out 0.8s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* 디자인 템플릿 프레임 */
+
+.TitleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .preview{
+    height: 100%;
+} */
+
+.previewframe{
+    /* height: 100%; */
+    position: relative;
+}
+
+/* 미리보기 이미지 파일 */
+#preview-image {
+    object-fit: cover;
+}
+
+.previewframe_background_opacity{
+    opacity: 0;
+    background: rgb(0,0,0,1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.imgDecoration{
+    width: 78px;
+    margin-bottom: 24px;
+}
+
+
+/* 디바이스별 반응형 - 청첩장 넓이와 동일하게 */
+@media screen and (max-width: 768px) {
+    .watermarkWrap {
+        max-width: 100%;
+    }
+}
+
+/* 카카오톡 인앱브라우저 SVG 렌더링 이슈 해결 */
+.graphic_img, 
+.graphic_img svg,
+svg,
+.design_simple_line_graphic_img_wrap {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    contain: layout style paint;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

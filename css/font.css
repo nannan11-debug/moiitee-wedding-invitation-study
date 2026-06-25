@@ -1,0 +1,187 @@
+@font-face {
+    font-family: 'Bilbo Swash Caps';
+    src: url('../fonts/external/BilboSwashCaps/BilboSwashCaps-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('../fonts/external/AlexBrush/AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/external/CormorantGaramond/CormorantGaramond-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('../fonts/external/CormorantGaramond/CormorantGaramond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/external/PlayfairDisplay/PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url('../fonts/external/PlayfairDisplay/PlayfairDisplay-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/*
+  [성능 최적화 2026-04-18]
+  - 모든 @font-face에 font-display 추가 (FOIT 방지)
+  - 메인에 필수인 Pretendard(400/600/700)와 JalnanGothic은 swap
+  - Pretendard Thin(200), Light(300)는 제거 (사용 1~4건, 가까운 weight로 자동 대체)
+
+  [2026-04-20 수정]
+  - 에디터/청첩장 전용 폰트를 `optional` → `swap` 으로 전환.
+    code splitting 으로 템플릿 CSS(예: DesignSimple_line_03.css)가 초기 렌더 이후
+    lazy load 되면, `optional`은 webfont 를 스킵하고 fallback 을 고정시켜 버림.
+    (Notted/Playfair 등이 적용 안 되는 현상 #1450)
+    `swap` 은 fallback → webfont 스왑을 허용하므로 late-load 에도 폰트가 적용됨.
+*/
+
+@font-face {
+	font-family: 'Notted';
+	src: url('../Resource/fonts/Notted/Notted.woff2') format('woff2'),
+	     url('../Resource/fonts/Notted/Notted.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Termina-Regular';
+	src: url('../Resource/fonts/termina-regular/termina-regular.woff2') format('woff2'),
+	     url('../Resource/fonts/termina-regular/termina-regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+@font-face {
+	font-family: 'Termina-Bold';
+	src: url('../Resource/fonts/termina-bold/termina-bold.woff2') format('woff2'),
+	     url('../Resource/fonts/termina-bold/termina-bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'NanumMyeongjo';
+	src: url('../fonts/korean/serif/NanumMyeongjo/original/NanumMyeongjo-Regular.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Pretendard Thin (100) - 초경량 — 히어로 서브타이틀 느낌 톤용 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/korean/gothic/Pretendard/original/Pretendard-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Light (300) - 히어로 타이틀/서브타이틀 가벼운 톤용 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/korean/gothic/Pretendard/original/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Regular (400) - 메인 필수 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/korean/gothic/Pretendard/original/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Medium (500) - 히어로 타이틀용 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/korean/gothic/Pretendard/original/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard SemiBold (600) - 메인 필수 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/korean/gothic/Pretendard/original/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Pretendard Bold (700) - 메인 필수 */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/korean/gothic/Pretendard/original/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('../fonts/korean/serif/ChosunNm/original/ChosunNm-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('../fonts/korean/serif/Gowun-Dodum/original/GowunDodum-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'MapoFlowerIsland';
+    src: url('../fonts/korean/serif/MapoFlowerIsland/original/MapoFlowerIsland-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'JalnanGothic';
+    src: url('../fonts/external/JalnanGothic/JalnanGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

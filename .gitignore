@@ -1,0 +1,16 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.bak
+fetch.py
+fetch.js
+fix-paths.py
+resources.json
+img-urls.json
+bg-urls.json
+text-content.txt
+page-rendered.html
+screenshot*.png

@@ -1,0 +1,455 @@
+#floating_payment_btn{
+    display: none;
+    position: absolute;
+    z-index: 1000001;
+    bottom: -1px;
+    position: fixed;
+    width: 100%;
+    z-index: 10000000000;
+    background: var(--ColorBase);
+    left: 0;
+    border-top: 1px solid var(--ColorBorder10);
+}
+
+.floating_payment_btn_wrap{
+    padding: 12px;
+}
+.checkoutSection_contents_wrap{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.checkoutSection_contents{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border-top: 4px solid var(--ColorTintBlack);
+}
+
+.checkoutSection_contents_wrap_successWrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    gap: 12px;
+}
+#orderId{
+    font-size: var(--Text-SupportedTitle);
+    color: var(--ColorTextSecondary);
+}
+
+#checkoutSection_contents_wrap_success{
+    display: flex;
+    flex-direction: column;
+}
+
+.mypage_link{
+    padding: 16px 24px;
+    cursor: pointer;
+    background: var(--ColorTintBlack);
+    color: var(--ColorSurface);
+}
+
+.checkoutSection_bills{
+    width: 30%;
+    padding: 40px;
+    border: 4px solid var(--ColorTintBlack);
+}
+.event_contents_banner_wrap{
+    width: 100%;
+    margin-top: 48px;
+    max-width: 460px;
+    cursor: pointer;
+}
+
+.checkoutSection_bills_titles{
+    font-size: var(--Text-SupportedTitle);
+    font-weight: 700;
+    color: var(--ColorTextPrimary);
+    padding: 12px 0px;
+    border-bottom: 1px solid var(--ColorBorder20);
+}
+.checkoutSection_bills_price_wrap_originalAmount, .checkoutSection_bills_price_wrap_couponAmount, .checkoutSection_bills_price_wrap_finalAmount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--Text-SupportedTitle);
+    color: var(--ColorTextPrimary);
+    font-weight: 600;
+}
+.checkoutSection_amount{
+    color: var(--ColorTextTertiary);
+}
+#final_amount{
+    color: var(--ColorBrandHighLight);
+    font-size: 32px;
+}
+#final_amount .unit {
+    font-size: var(--Text-SupportedTitle); /* 원 부분의 폰트 크기 */
+}
+
+.checkoutSection_bills{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.checkoutSection_bills_price_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.checkoutSection_contents_items{
+    padding: 24px 0px;
+    border-bottom: 1px solid var(--ColorBorder20);
+}
+
+#checkoutSection_contents_items_refund{
+    border-bottom: none;
+}
+
+
+
+.checkoutSection_contents_product_info_img{
+    width: 106px;
+    height: 106px;
+    object-fit: cover;
+}
+
+.checkoutSection_contents_product_infoWrap, .checkoutSection_coupon_info_wrap{
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+    align-items: center;
+}
+/* #payment-method{
+    padding: 24px 0px;
+} */
+
+.checkoutSection_order_info, .checkoutSection_coupon_info, .checkoutSection_refund_section_title{
+    font-size: var(--Text-SupportedTitle);
+    color: var(--ColorTextPrimary);
+    font-weight: 700;
+}
+.checkoutSection_contents_product_info_section_weddingInfo_wrap{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextTertiary);
+}
+.borderLine_vertical{
+    width: 1px;
+    height: 8px;
+    background: var(--ColorTextTertiary);
+}
+.checkoutSection_refund_section_description{
+    list-style: none;
+    padding: 0;
+}
+.checkoutSection_refund_section_description_list{
+    font-size: var(--Text-Supported);
+}
+
+
+.checkoutSection_contents_product_info_section_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    color: var(--ColorTextPrimary);
+}
+.checkoutSection_contents_product_info_section_title{
+    font-size: var(--Text-SupportedTitle);
+    font-weight: 700;
+}
+.checkoutSection_contents_product_info_section_weddingDate{
+    font-size: var(--Text-Supported);
+}
+
+.checkoutSection_contents_product_price{
+    font-size: var(--Text-Title);
+    font-weight: 700;
+    color: var(--ColorBrandHighLight);
+}
+.checkoutSection_contents_product_price .unit{
+    font-size: var(--Text-SupportedTitle);
+}
+
+.checkoutSection_coupon_info_wrap{
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    align-items: center;
+}
+.checkoutSection_coupon_input_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 440px;
+    width: 100%;
+    font-family: 'Termina-Regular', 'pretendard', sans-serif;
+    color: var(--ColorTextPrimary);
+    font-size: var(--tem-text-supported);
+}
+
+.checkoutSection_coupon_input{
+    padding: 12px 20px;
+    border: 1px solid var(--ColorTintBlack);
+    background: none;
+    font-family: 'Termina-Regular', 'pretendard', sans-serif;
+}
+.normal_button{
+    cursor: pointer;
+    color: var(--ColorTextPrimary);
+    padding: 12px 20px;
+    border: 1px solid var(--ColorTintBlack);
+    transition: var(--transition);
+    font-family: 'Termina-Regular', 'pretendard', sans-serif;
+}
+.normal_button:hover{
+    border: 1px solid var(--ColorTintBlack);
+    background: var(--ColorTintBlack);
+    color: var(--ColorSurface);
+}
+
+#payment-request-button{
+    width: 100%;
+    height: 72px;
+    line-height: 72px;
+    font-size: var(--Text-SectionTitle);
+    color: var(--ColorSurface);
+    background: var(--ColorTintBlack);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+#payment-request-button-floating{
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    font-size: var(--Text-SectionTitle);
+    color: var(--ColorSurface);
+    background: var(--ColorTintBlack);
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+#payment-request-button:hover{
+    opacity: 0.8;
+}
+
+.borderLine_horizon{
+    width: 100%;
+    height: 1px;
+    background: var(--ColorBorder20);
+}
+
+.checkoutSection_coupon_item{
+    display: flex;
+    flex-direction: column;
+    padding: 16px 20px;
+    max-width: 432px;
+    border: 1px solid var(--ColorTintBlack);
+    margin-top: 24px;
+    gap: 16px;
+}
+
+
+.checkoutSection_coupon_item_price{
+    font-size: var(--Text-ButtonLg);
+    font-weight: 700;
+    color: var(--ColorBrandHighLight);
+}
+.checkoutSection_coupon_item_title{
+    font-size: var(--Text-SupportedTitle);
+    font-weight: 700;
+    color: var(--ColorTextPrimary);
+}
+.checkoutSection_coupon_item_header_checkbox{
+    width: 20px;
+    height: 20px;
+    border: var(--ColorTintBlack);
+    background: none;
+    border-radius: 0;
+    margin: 0;
+}
+.checkoutSection_coupon_item_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px 16px 0px;
+    border-bottom: 1px solid var(--ColorBorder20);
+}
+
+.checkoutSection_coupon_item_body_info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkoutSection_coupon_item_body_info_coupon_title{
+    font-size: var(--Text-SupportedTitle);
+    color: var(--ColorTextPrimary);
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.checkoutSection_coupon_item_body_info_coupon_expireDate, .checkoutSection_coupon_item_body_info_coupon_useGuide{
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextSecondary);
+    font-weight: 400;
+}
+
+.event_contents_banner_section{
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.pay_method_wrap{
+    background: var(--ColorSurface);
+}
+
+.checkoutSection_bills_price_wrap_checkItems_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.checkoutSection_bills_price_wrap_checkItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    border: 1px solid var(--ColorTextSecondary);
+    gap: 8px;
+    cursor: pointer;
+}
+
+.checkoutSection_bills_price_wrap_checkItem:hover{
+    border: 1px solid var(--ColorTextPrimary)
+}
+
+@media (min-width: 810px) and (max-width: 1439px){
+
+    .checkoutSection_contents_wrap{
+        flex-direction: column;
+    }
+    .checkoutSection_contents{
+        width: 100%;
+    }
+    .checkoutSection_bills{
+        width: calc(100% - 88px);
+    }
+    .checkoutSection_coupon_item{
+        max-width: 100%;
+    }
+
+    .event_contents_banner_section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 809px){
+
+    .event_contents_banner_section{
+        grid-template-columns: 1fr;
+    }
+    .checkoutSection_contents_product_info_section{
+        width: 100%;
+    }
+    .checkoutSection_contents_product_infoWrap, .checkoutSection_coupon_info_wrap{
+        flex-direction: column;
+    }
+    .checkoutSection_contents_product_info_section_weddingInfo_wrap{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .checkoutSection_contents_product_info_img {
+        width: 100%;
+        height: 240px;
+    }
+    .checkoutSection_coupon_input{
+        width: calc(100% - 42px);
+    }
+    .checkoutSection_refund_section_description{
+        color: var(--ColorTextPrimary);
+        font-size: var(--Text-Supported);
+    }
+
+    .normal_button{
+        width: 100%;
+    }
+
+    .borderLine_vertical{
+        display: none;
+    }
+
+    .checkoutSection_contents_wrap{
+        flex-direction: column;
+    }
+    .checkoutSection_contents{
+        width: 100%;
+    }
+    .checkoutSection_bills{
+        width: calc(100% - 40px);
+        padding: 16px;
+    }
+    #final_amount{
+        font-size: 24px;
+    }
+    #payment-request-button{
+        height: 44px;
+        line-height: 44px;
+    }
+    .checkoutSection_coupon_item{
+        max-width: 100%;
+    }
+    .event_contents_banner_wrap{
+        max-width: 375px;
+    }
+    .checkoutSection_coupon_input_wrap{
+        max-width: 100%;
+    }
+    #floating_payment_btn{
+        display: block;
+    }
+
+    .floating_payment_btn_wrap_badge{
+        position: absolute;
+        font-size: 12px;
+        white-space: nowrap;
+        font-weight: 600;
+        top: -4px;
+        transform: translateX(-50%);
+        left: 50%;
+        z-index: 10000000;
+        background: var(--ColorBrandHighLight);
+        color: var(--ColorSurface);
+        padding: 4px 12px;
+        border-radius: var(--BorderRadius-Capsule);
+    }
+    .floating_payment_btn_wrap_badge_triangle{
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -6px;
+    }
+
+}

@@ -1,0 +1,1639 @@
+.mypage_contents {
+    font-family: 'Termina-Regular', 'pretendard', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+    padding: 96px 20px 40px 20px;
+    align-items: center;
+}
+
+.mypage_contents_container{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+}
+
+.mypage_inner {
+    width: 100%;
+    min-height: calc(100vh - 96px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.myPageTitle {
+    font-size: var(--Text-Title);
+    font-weight: 700;
+}
+
+.myPageTitleWrap {
+    width: 100%;
+}
+
+.myPageDescription {
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextSecondary);
+}
+
+.myPageHelperBtn {
+    display: none;
+}
+
+.myPageTitleWrapSec {
+    gap: 24px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.InvitationCautionInfo {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--ColorBorderSolid);
+    height: fit-content;
+}
+
+.CautionTitle {
+    font-size: var(--Text-SectionTitle);
+    color: var(--ColorTextPrimary);
+}
+
+.Infoli {
+    border-radius: var(--BorderRadius-Lg);
+    padding: 20px;
+    background: var(--ColorBase);
+}
+
+.InfoliTtile {
+    font-size: var(--Text-SectionMainTitle);
+    font-weight: 700;
+    color: var(--ColorTextPrimary);
+    margin-bottom: 8px;
+}
+
+.InfoliDescription {
+    font-size: var(--Text-Supported);
+    font-weight: 400;
+    color: var(--ColorTextSecondary);
+}
+
+#Helper_Dimmed {
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+}
+
+.CautionInfo {
+    border-radius: var(--BorderRadius-XL);
+    color: var(--ColorTextSecondary);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    line-height: 1.6;
+    font-size: var(--Text-Paragraph);
+    list-style: none;
+    padding: 0;
+    background: var(--ColorSurface);
+}
+
+.HistoryWrap {
+    display: flex;
+    /* justify-content: space-between; */
+    border-top: 1px solid var(--ColorBorder20);
+}
+
+.HistoryWrap:last-child {
+    border-bottom: 1px solid var(--ColorBorder20);
+}
+
+.HistoryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.HistoryItemWrapHead {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.typeInfoHead {
+    display: flex;
+    flex-direction: column;
+}
+
+.InviteTypeTItle {
+    font-size: var(--Text-Supported);
+    font-weight: 700;
+    color: var(--ColorTextPrimary);
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.HistoryImgWrap {
+    justify-content: center;
+    align-items: center;
+    width: 300%;
+    display: flex;
+    gap: 24px;
+    overflow: hidden;
+    top: 10px;
+    z-index: 0;
+    padding: 40px;
+    border-right: 1px solid var(--ColorBorder20);
+}
+
+.HistoryImg {
+    height: 100%;
+    max-width: 106px;
+    max-height: 106px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.expiredDate {
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+    font-size: 11px;
+    padding: 8px;
+    color: #fff;
+    background: rgb(0, 0, 0, 0.7);
+    width: calc(100% - 16px);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.orderProgressWrap {
+    font-size: var(--Text-SectionTitle);
+    color: var(--ColorTextTertiary);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+.order_stage:nth-child(1) {
+    color: var(--ColorTextPrimary);
+}
+
+.DelDate,
+.CreateDate {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextSecondary);
+}
+
+.sectionline {
+    width: 1px;
+    height: 8px;
+    background: var(--ColorTextTertiary);
+}
+
+.InviteTailWrap {
+    display: flex;
+}
+
+.IfnoTitleHeadWrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.InviteURLWrap,
+.kakaoShareWrap,
+.history_btn_delete,
+.mypage_section_rsvp_contents_excel_download_buttons_wrap {
+    position: relative;
+    cursor: pointer;
+    height: 30px;
+    padding: 8px 0px;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    color: var(--ColorTextPrimary);
+    width: 100%;
+}
+
+.InviteURLWrap.disabled,
+.kakaoShareWrap.disabled {
+    display: none;
+}
+
+.InviteInfoWrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.InviteURLInfo {
+    display: none;
+    font-size: var(--Text-Button);
+}
+
+#InviteURLCopy {
+    color: var(--ColorTextPrimary);
+}
+
+.InviteURLCopy {
+    border-radius: var(--BorderRadius-Xs);
+    font-size: var(--Text-Button);
+}
+
+#InviteShareIcon {
+    background-image: url('../../Resource/assets/Icon/Kakao.svg');
+}
+
+.InfoTitleHead {
+    gap: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.HistoryItemWrapTail {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 40px;
+    border-right: 1px solid var(--ColorBorder20);
+}
+
+.productPrice {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--ColorTextPrimary);
+}
+
+.productPrice .unit {
+    font-size: var(--Text-SectionTitle);
+}
+
+.productPriceWrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding: 40px;
+    align-items: center;
+    border-right: 1px solid var(--ColorBorder20);
+}
+
+.productGuideWrap {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+}
+
+.productGuideWrap_inner{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextSecondary);
+}
+.productGuideWrap_inner_item{
+    line-height: 1.5;
+}
+
+.coachmark_checkout {
+    position: absolute;
+    transform: translateX(33.3%);
+    bottom: -16px;
+    left: 0;
+    padding: 4px 16px;
+    color: var(--ColorSurface);
+    background: var(--ColorBrandHighLight);
+    font-size: 10px;
+}
+
+
+
+.btnPurchased_wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px;
+    width: 100%;
+    max-width: 240px;
+}
+
+#BtnPurchased {
+    cursor: auto;
+    font-size: var(--Text-SectionTitle);
+    color: var(--ColorTextPrimary);
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    border: none;
+    /* width: 160px; */
+}
+
+#BtnWaterMark:disabled {
+    font-size: var(--Text-Button);
+    background: none;
+    border: 1px solid var(--ColorBorder20);
+    color: var(--ColorTintDisabled);
+    width: 100%;
+    display: block;
+    opacity: 1;
+    cursor: auto;
+}
+
+#BtnPurchased_keep_permanent{
+    max-width: 240px;
+}
+
+.purchased_keep_date{
+    width: 100%;
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextPrimary);
+    text-align: center;
+}
+
+.btnEditWrap {
+    max-width: 280px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.BtnMd,
+.BtnEdit,
+.BtnPreview,
+.purchase-btn {
+    background: none;
+    width: 100%;
+    font-size: var(--Text-Button);
+    font-weight: 700;
+    cursor: pointer;
+    color: var(--ColorTextPrimary);
+    padding: 0px 20px;
+    border: 1px solid var(--ColorTextTertiary);
+    transition: var(--transition);
+    height: 48px;
+}
+
+.history_btn_edit_wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#history_btn_delete{
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    color: var(--ColorTintRed);
+}
+
+.TypeInfo {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 60%;
+}
+
+.InfoPriceWrap {
+    font-size: var(--Text-SectionTitle);
+    font-weight: 700;
+    color: var(--ColorBrandHighLight);
+}
+
+.dDayProgress {
+    position: relative;
+    width: 100%;
+    height: 4px;
+    background: var(--ColorBase);
+    border-radius: var(--BorderRadius-XL);
+}
+
+.dDayProgressBar {
+    height: 4px;
+    position: absolute;
+    width: 50%;
+    background: var(--ColorBrandHighLight);
+    border-radius: var(--BorderRadius-XL);
+}
+
+.tooltip {
+    background-color: var(--ColorTintBlack);
+    padding: 8px 12px;
+    font-size: var(--Text-Supported);
+    font-weight: 300;
+    border-radius: 6px;
+    width: 80%;
+    display: inline-block;
+    /* inline-block으로 설정하여 transform을 적용하기 위함입니다. */
+    position: absolute;
+    /* 버튼 내에서 절대 위치를 설정하기 위해 사용합니다. */
+    bottom: 100%;
+    /* 버튼의 맨 위에 위치하게 설정합니다. */
+    left: 50%;
+    /* 가운데 정렬을 위해 설정합니다. */
+    transform: translateX(-50%) translateY(10px);
+    /* 시작 위치를 아래로 설정합니다. */
+    opacity: 0;
+    /* 처음에는 안 보이게 설정합니다. */
+    transition: opacity 0.3s, transform 0.3s;
+    /* 애니메이션 효과를 설정합니다. */
+    pointer-events: none;
+    /* 마우스 이벤트가 적용되지 않도록 설정합니다. */
+    margin-bottom: 8px;
+    box-shadow: 2px 6px 12px 5px rgb(0, 0, 0, 0.2);
+}
+
+#triangle {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid black;
+}
+
+#BtnInviteView:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+    display: block;
+    border: 1px solid var(--ColorTintDisabled);
+    color: var(--ColorTintDisabled);
+}
+
+#BtnInviteView:hover .tooltip {
+    transform: translateX(-50%) translateY(0);
+    /* 위로 움직입니다. */
+    opacity: 1;
+    /* 완전히 보이게 설정합니다. */
+}
+
+.tooltip {
+    color: var(--ColorSurface);
+}
+
+#BtnInviteView {
+    position: relative;
+    border: 1px solid var(--ColorTextTertiary);
+    color: var(--ColorTextPrimary);
+}
+
+.nullImage {
+    width: 200px;
+    margin-bottom: 24px;
+}
+
+.BgDimmedWrap {
+    padding: 24px;
+}
+
+#HistoryWrapNull {
+    display: flex;
+    padding: 48px;
+    flex-direction: column;
+    height: calc(100vh - 320px);
+    justify-content: center;
+    border: 1px solid var(--ColorBorderSolid);
+}
+
+#HistoryNull {
+    justify-content: center;
+    font-size: var(--Text-Paragraph);
+    color: var(--ColorTextPrimary);
+}
+
+.diviceSection {
+    padding: 96px 48px 48px 48px;
+}
+
+.deviceWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.deviceWrap_frame {
+    position: relative;
+    width: 100%;
+    max-width: 375px;
+}
+
+.HistorySection {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    flex-direction: column;
+}
+
+.historySection_category {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 4px solid var(--ColorTintBlack);
+    padding: 24px 0px;
+}
+
+.historySection_category_items {
+    width: 100%;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.historySection_category_items:nth-child(1) {
+    width: 300%;
+}
+
+
+.InviteTailWrap_inner{
+    display: flex;
+    flex-direction: column;
+}
+.mypage_section_rsvp_contents_excel_download_buttons_title_wrap_img{
+    width: 16px;
+    height: 16px;
+}
+
+.wedding-poster-tab {
+    /* 모바일 청첩장 탭의 스타일을 여기에 복사 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* 추가적인 스타일이 필요하다면 여기에 추가 */
+}
+
+@media (min-width: 891px) and (max-width: 1439px) {
+
+    .mypage_inner {
+        flex-direction: column;
+    }
+
+    .CautionInfo {
+        display: none;
+    }
+
+    .myPageTitleWrap {
+        padding: 0;
+    }
+
+    .deviceHoverWrap {
+        width: calc(100% - 24px);
+        max-width: 351px;
+    }
+
+    .InvitationCautionInfo {
+        flex-direction: column;
+    }
+
+    .HistorySection {
+        grid-template-columns: 1fr;
+    }
+
+    .orderProgressWrap {
+        font-size: var(--Text-SectionSubTitle);
+    }
+
+    .HistoryWrap {
+        flex-direction: column;
+    }
+
+    .HistoryImgWrap {
+        padding: 24px 0px;
+        width: 100%;
+        border: none;
+    }
+
+    .InviteURLCopy,
+    #InviteURLCopy {
+        display: none;
+    }
+
+    .HistoryItemWrapTail {
+        padding: 24px 0px 10px 0px;
+        width: auto;
+        border: none;
+    }
+
+    .historySection_category {
+        display: none;
+    }
+
+    .sectionline {
+        display: none;
+    }
+
+    .DelDate,
+    .CreateDate {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .productPriceWrap {
+        width: auto;
+        border: none;
+        padding: 0;
+    }
+
+    .productPrice {
+        display: none;
+    }
+
+    #BtnWaterMark {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .productGuideWrap {
+        width: auto;
+    }
+
+    .btnEditWrap {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    #BtnPurchased {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btnPurchased_wrap{
+        max-width: 100%;
+        padding: 12px 0px;
+        border: 1px solid var(--ColorTextTertiary);
+        background: rgb(0, 0, 0, 0.05);
+        opacity: 0.6;
+    }
+
+}
+
+@media (max-width: 890px) {
+
+    .mypage_contents {
+        padding: 88px 12px 40px 12px;
+    }
+
+    .mypage_inner {
+        flex-direction: column;
+    }
+
+    .CautionInfo {
+        max-height: 400px;
+        overflow: scroll;
+        display: none;
+    }
+
+    .myPageTitleWrap {
+        padding: 0;
+    }
+
+    .myPageHelperBtn {
+        display: block;
+        font-size: var(--Text-Button);
+        color: var(--ColorTextPrimary);
+        height: 30px;
+        padding: 0px 16px;
+        border: 1px solid var(--ColorTextPrimary);
+        line-height: 30px;
+        border-radius: var(--BorderRadius-Capsule);
+    }
+
+    .myPageTitleWrapSec {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+
+    .IfnoTitleHeadWrap {
+        flex-direction: row;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .TypeInfo {
+        gap: 8px;
+        width: 100%;
+    }
+
+    .InviteTailWrap {
+        justify-content: flex-end;
+    }
+
+    .HistorySection {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .HistoryWrap {
+        padding: 20px 0px;
+    }
+
+    .DelDate,
+    .CreateDate {
+        padding: 8px 0px;
+    }
+
+    .HistoryItemWrapTail {
+        padding: 24px 0px 10px 0px;
+        flex-direction: column;
+    }
+
+    .BtnMd,
+    .BtnEdit,
+    .BtnPreview,
+    .history_btn_delete {
+        height: 40px;
+    }
+
+    .btnEditWrap {
+        max-width: 100%;
+        flex-direction: column;
+        width: 100%;
+    }
+    .history_btn_edit_wrap{
+        width: 100%;
+    }
+
+    .mypage_inner {
+        gap: 16px;
+    }
+
+    .InvitationCautionInfo {
+        flex-direction: column;
+    }
+
+    .deviceHoverWrap {
+        max-width: calc(100% - 24px);
+        border-radius: 48px;
+    }
+
+    .orderProgressWrap {
+        font-size: var(--Text-SectionSubTitle);
+    }
+
+    .historySection_category {
+        display: none;
+    }
+
+    .HistoryWrap {
+        flex-direction: column;
+    }
+
+    .HistoryImgWrap {
+        padding: 0;
+        width: 100%;
+        border: none;
+        flex-direction: column;
+    }
+
+    .HistoryImg {
+        height: 100%;
+        max-width: 100%;
+        max-height: 320px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .InviteURLCopy,
+    #InviteURLCopy {
+        display: none;
+    }
+
+    .HistoryItemWrapTail {
+        width: auto;
+        border: none;
+    }
+
+    .sectionline {
+        display: none;
+    }
+
+    .DelDate,
+    .CreateDate {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .productPriceWrap {
+        width: auto;
+        border: none;
+        padding: 0;
+    }
+
+    .productPrice {
+        display: none;
+    }
+
+    #BtnWaterMark {
+        height: 40px;
+        max-width: 100%;
+        width: 100%;
+        font-size: var(--Text-Button);
+    }
+
+    .productGuideWrap {
+        width: 100%;
+        padding: 24px 0px;
+        justify-content: flex-start;
+    }
+
+    #BtnPurchased {
+        max-width: 100%;
+        /* width: 160px; */
+    }
+
+    .BgDimmedWrap {
+        padding: 0px;
+    }
+    .orderProgressWrap{
+        display: none;
+    }
+    .btnPurchased_wrap{
+        width: 100%;
+        max-width: 100%;
+        padding: 12px 0px;
+        border: 1px solid var(--ColorTextTertiary);
+        background: rgb(0, 0, 0, 0.05);
+        opacity: 0.6;
+    }
+    
+}
+
+.tabs {
+    overflow: hidden;
+    display: flex;
+    border-bottom: 1px solid var(--ColorBorderSolid);
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.tablinks {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 24px;
+    transition: var(--transition);
+    font-size: var(--Text-SectionMainTitle);
+    border-bottom: 1px solid var(--ColorBorder20);
+    font-weight: 500;
+    color: var(--ColorTextTertiary);
+    position: relative;
+    text-align: center;
+    flex: 1;
+}
+
+.tablinks:hover {
+    color: var(--ColorTextPrimary);
+}
+
+.tablinks.active {
+    color: var(--ColorTextPrimary);
+    font-weight: 700;
+    background-color: transparent;
+    position: relative;
+}
+
+.tablinks.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--ColorTintBlack);
+}
+
+.tabcontent {
+    display: none;
+    width: 100%;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* 웨딩 포스터 카드 스타일 - 이미지와 정보 분리 */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+.invitation-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9;
+    height: 100%;
+    position: relative;
+    border: none;
+    padding: 0;
+}
+
+.invitation-card:not(.new-template-card):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.invitation-card-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background-color: #eee;
+}
+
+.invitation-card .HistoryImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: none;
+    max-height: none;
+}
+
+.invitation-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #efefef;
+    background-color: #e5e5e5;
+}
+
+.invitation-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+}
+
+.invitation-card-title {
+    font-size: var(--Text-SectionSubTitle);
+    font-weight: 600;
+    color: var(--ColorTextPrimary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.invitation-card-date {
+    font-size: var(--Text-Supported-2);
+    color: var(--ColorTextSecondary);
+}
+
+.invitation-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.invitation-purchased-badge {
+    font-size: var(--Text-Supported-2);
+    font-weight: 600;
+    color: var(--ColorBrandHighLight);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.invitation-more-options {
+    position: relative;
+}
+
+.more-options-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: var(--ColorTextTertiary);
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.2s ease;
+}
+
+.more-options-btn:hover {
+    color: var(--ColorTextPrimary);
+}
+
+.more-options-menu {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    margin-bottom: 4px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    z-index: 10;
+    min-width: 150px;
+    display: none;
+}
+
+.more-options-menu.show {
+    display: block;
+}
+
+.menu-item {
+    font-size: var(--Text-Supported);
+    color: var(--ColorTextPrimary);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item.delete-invitation {
+    color: var(--ColorTintRed);
+}
+
+/* 카드 오버레이 및 액션 버튼 */
+.invitation-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.invitation-card:hover .invitation-card-overlay {
+    opacity: 1;
+}
+
+.invitation-card-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+}
+
+.card-btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    font-size: var(--Text-Button);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 100px;
+    text-align: center;
+}
+
+.card-btn.view-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--ColorTextPrimary);
+}
+
+.card-btn.view-btn:hover {
+    background-color: #ffffff;
+}
+
+.card-btn.edit-btn {
+    background-color: var(--ColorBrandHighLight);
+    color: white;
+}
+.card-btn.edit-btn:hover {
+    background-color: #0069d9;
+}
+
+.card-btn.purchase-btn {
+    background-color: var(--ColorTintBlack);
+    color: white;
+    width: auto;
+    max-width: none;
+}
+
+.card-btn.purchase-btn:hover {
+    background-color: #000000;
+}
+
+/* 새 템플릿 카드 스타일 */
+.new-template-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f9;
+    border: 2px dashed #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.new-template-card:hover {
+    border-color: var(--ColorBrandHighLight);
+    background-color: #f9f9f9;
+}
+
+.new-template-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 40px 0;
+}
+
+.new-template-icon {
+    font-size: 40px;
+    color: var(--ColorTextTertiary);
+    line-height: 1;
+}
+
+.new-template-text {
+    font-size: var(--Text-Button);
+    color: var(--ColorTextSecondary);
+    font-weight: 500;
+}
+
+.new-template-card:hover .new-template-icon,
+.new-template-card:hover .new-template-text {
+    color: var(--ColorBrandHighLight);
+}
+
+@media (max-width: 890px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    
+    .invitation-card-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
+    }
+    
+    .card-btn {
+        padding: 6px 12px;
+        min-width: auto;
+        font-size: 12px;
+    }
+    
+    .invitation-card-title {
+        font-size: var(--Text-Button);
+    }
+
+    .invitation-card-date {
+        font-size: 12px;
+    }
+    
+    .more-options-menu {
+        right: -80px;
+    }
+}
+/* 이미지 영역 우측 상단 더보기 버튼 */
+.image-more-options {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+
+.image-more-options .more-options-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.image-more-options .more-options-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-more-options .more-options-menu {
+    top: 100%;
+    right: 0;
+    margin-top: 8px;
+    bottom: auto;
+}
+
+/* 더보기 메뉴가 오버레이와 겹치지 않도록 수정 */
+.invitation-card-overlay {
+    padding-top: 60px; /* 상단 여백 추가 */
+}
+
+/* 웨딩 포스터 카드 스타일 */
+.poster-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9;
+    height: 100%;
+    position: relative;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.poster-card:not(.new-template-card):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.poster-card-image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+    background-color: #eee;
+}
+
+.poster-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.poster-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #efefef;
+    background-color: #e5e5e5;
+}
+
+.poster-card-content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: #fff;
+}
+
+.poster-card-title {
+    font-size: var(--Text-SectionSubTitle);
+    font-weight: 600;
+    color: var(--ColorTextPrimary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.poster-card-date {
+    font-size: var(--Text-Supported-2);
+    color: var(--ColorTextSecondary);
+}
+
+/* 카드 그리드 수정 */
+.card-grid.few-cards {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    justify-content: start;
+}
+
+@media (max-width: 890px) {
+    .poster-card-title {
+        font-size: var(--Text-Button);
+    }
+
+    .poster-card-date {
+        font-size: 12px;
+    }
+}
+
+/* 웨딩 포스터 오버레이 및 액션 */
+.poster-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.poster-card:hover .poster-overlay {
+    opacity: 1;
+}
+
+.poster-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.poster-btn {
+    padding: 8px 20px;
+    border-radius: 4px;
+    border: none;
+    font-size: var(--Text-Button);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 100px;
+    text-align: center;
+}
+
+.poster-btn.view-btn {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--ColorTextPrimary);
+}
+
+.poster-btn.edit-btn {
+    background-color: var(--ColorBrandHighLight);
+    color: white;
+}
+
+/* 뱃지 컨테이너 */
+.badge-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* 영구보관 뱃지 스타일 */
+.invitation-permanent-badge {
+    font-size: var(--Text-Supported-2);
+    font-weight: 600;
+    color: #6f42c1;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(111, 66, 193, 0.1);
+}
+
+/* 기존 구매완료 뱃지 스타일 유지 */
+.invitation-purchased-badge {
+    font-size: var(--Text-Supported-2);
+    font-weight: 600;
+    color: var(--ColorBrandHighLight);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* 결제전 뱃지 스타일 */
+.invitation-unpaid-badge {
+    font-size: var(--Text-Supported-2);
+    font-weight: 600;
+    color: var(--ColorTextTertiary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(108, 117, 125, 0.1);
+}
+
+/* 보관기간 뱃지 스타일 */
+.invitation-expiry-badge {
+    font-size: var(--Text-Supported-2);
+    font-weight: 600;
+    color: #20c997;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: rgba(32, 201, 151, 0.1);
+    max-width: 140px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 상단 블랙 영역 (쿠폰 갯수 영역) 스타일 */
+.user_info_black_area {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.user_info_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.user_name_area {
+    flex-shrink: 0;
+}
+
+.user_name_area h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.user_name_area p {
+    font-size: var(--Text-Supported);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.user_stats_area {
+    display: flex;
+    gap: 30px;
+}
+
+.stat_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    gap: 20px;
+    min-width: 150px;
+}
+
+.stat_box p {
+    font-size: var(--Text-Supported);
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrow-icon {
+    font-style: normal;
+}
+
+.stat_box h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.view_detail_btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: var(--Text-Supported-2);
+    transition: background-color 0.2s;
+}
+
+.view_detail_btn:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* 사이드 네비게이션 스타일 */
+.mypage_inner {
+    display: flex;
+    gap: 40px;
+}
+
+.side_navigation {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.side_nav_section {
+    margin-bottom: 30px;
+}
+
+.side_nav_section h3 {
+    font-size: var(--Text-SectionSubTitle);
+    font-weight: 700;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--ColorBorderSolid);
+}
+
+.side_nav_section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side_nav_section li {
+    margin-bottom: 12px;
+}
+
+.side_nav_section a {
+    text-decoration: none;
+    color: var(--ColorTextPrimary);
+    font-size: var(--Text-Paragraph);
+    transition: color 0.2s;
+    display: block;
+}
+
+.side_nav_section a:hover {
+    color: var(--ColorBrandHighLight);
+}
+
+.main_content_area {
+    flex-grow: 1;
+}
+
+/* 모바일 반응형 스타일 */
+@media (max-width: 890px) {
+    .user_info_container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    
+    .user_stats_area {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .stat_box {
+        min-width: 0;
+        width: calc(50% - 15px);
+        padding: 10px;
+    }
+    
+    .mypage_inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .side_navigation {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid var(--ColorBorderSolid);
+    }
+    
+    .side_nav_section {
+        width: calc(50% - 10px);
+        margin-bottom: 15px;
+    }
+    
+    .side_nav_section h3 {
+        font-size: var(--Text-Button);
+    }
+    
+    .side_nav_section a {
+        font-size: var(--Text-Supported);
+    }
+}
+
+@media (min-width: 891px) and (max-width: 1439px) {
+    .user_info_container {
+        padding: 0 20px;
+    }
+    
+    .stat_box {
+        min-width: 120px;
+    }
+    
+    .side_navigation {
+        width: 180px;
+    }
+}
+
